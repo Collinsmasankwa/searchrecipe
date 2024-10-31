@@ -55,8 +55,7 @@ function Home(){
                          totalResults: number
                     }
                  */
-                console.log(response.data)
-                if (Object.keys(response.data).length > 0){
+                if (response.data.results.length > 0){
                     addToRecipes(response.data.results);
                     setRecipesCount(response.data.totalResults);
                     setSearchResultsCount((count)=>count + 5);
