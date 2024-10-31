@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/searchrecipe/:match*", "destination": "/:match*" }
+  ]
+}
