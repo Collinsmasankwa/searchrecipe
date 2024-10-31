@@ -11,7 +11,7 @@ function Index(){
     return (
         <>
             <RecipeProvider>
-                <BrowserRouter basename='/searchrecipe'>
+                <BrowserRouter>
                     <Routes>
                         <Route path='/' element={<HeaderFooter  />}>
                             <Route index element={<Home />} />
