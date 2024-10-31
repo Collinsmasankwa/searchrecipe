@@ -55,9 +55,13 @@ function Home(){
                          totalResults: number
                     }
                  */
-                addToRecipes(response.data.results);
-                setRecipesCount(response.data.totalResults);
-                setSearchResultsCount((count)=>count + 5);
+                if (Object.keys(response.data).length > 0){
+                    addToRecipes(response.data.results);
+                    setRecipesCount(response.data.totalResults);
+                    setSearchResultsCount((count)=>count + 5);
+                } else {
+                    setDisplayFetchErrors("The recipe was not found! Try with another word!");
+                }
             } catch(error){
                 if (axios.isCancel(error)){
                     // console.log('token cancelled');
